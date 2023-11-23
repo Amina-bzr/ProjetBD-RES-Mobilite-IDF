@@ -1,0 +1,8 @@
+/vendor/
+.env
+/build/
+/logs/
+/temp/
+*.log
+*.tmp
+/config/local.conf
