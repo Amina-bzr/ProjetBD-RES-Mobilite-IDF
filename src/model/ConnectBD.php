@@ -1,18 +1,13 @@
 <?php
-namespace model;
 
-use PDO;
+       $config = require_once(__DIR__ . '/../../database.php');
 
-class ConnectBD {
-    public static function connect() {
-        $config = require_once(__DIR__ . '/../../config/database.php');
+	try {
+		$bdd = new PDO("pgsql:host={$config['host']};dbname={$config['dbname']}", $config['user'], $config['password']);
+		}
+	catch (PDOException $e) {
+		echo "Error : " . $e->getMessage() . "<br/>";
+		die();
+		}
 
-        $dsn = "postgresql://{$config['user']}@{$config['host']}/{$config['dbname']}?sslmode=require";
-
-        try {
-            return new PDO($dsn);
-        } catch (PDOException $e) {
-            die("Connection non etablie avec le serveur bd: " . $e->getMessage());
-        }
-    }
-}
+?>
