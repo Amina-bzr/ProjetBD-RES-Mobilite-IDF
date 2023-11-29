@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Homepage</title>
+    <title>Accueil</title>
     <style>
         body {
             margin: 0;
@@ -31,7 +31,7 @@
             font-weight: bold;
         }
 
-        .login-button {
+        .login-btn {
             background-color: #fff;
             color: #3498db;
             padding: 1.2em 2.4em;
@@ -82,7 +82,7 @@
     <nav>
         <a href="#">À propos</a>
         <a href="#">FAQ</a>
-        <a class="login-button" href="src/view/login.php">Se Connecter</a>
+        <a class="login-btn" href="src/view/login.php">Se Connecter</a>
     </nav>
 
     <section>
